@@ -19,9 +19,9 @@ namespace Vizallas.Pages
             _context = context;
         }
         [BindProperty(SupportsGet = true)]
-        public int KivalasztottVaros { get; set; }
+        public string KivalasztottVaros { get; set; }
         public IList<Adatok> Adatok { get;set; } = default!;
-        public IList<int> Varos { get; set; } = default!;
+        public IList<string> Varos { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
@@ -32,7 +32,7 @@ namespace Vizallas.Pages
                 .ToListAsync();
 
            
-            if (KivalasztottVaros == 0 && Varos.Any())
+            if (KivalasztottVaros == null)
             {
                 KivalasztottVaros = Varos.FirstOrDefault();
             }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vizallas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0b6a6026e131c50e5857426f50f9d0ab3c348a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5466fa91d2bfde56f4f2e3f25f12a83830885106")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vizallas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vizallas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

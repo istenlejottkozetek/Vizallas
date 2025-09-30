@@ -6,9 +6,9 @@ namespace Vizallas.Models
     {
         
         public int Id { get; set; }
-        public int datum { get; set; }
+        public string datum { get; set; }
         public int vizallas { get; set; }
-        public int varos { get; set; }
-        public int folyo { get; set; }
+        public string varos { get; set; }
+        public string folyo { get; set; }
     }
 }

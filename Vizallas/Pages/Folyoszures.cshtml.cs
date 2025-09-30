@@ -19,10 +19,10 @@ namespace Vizallas.Pages
             _context = context;
         }
         [BindProperty(SupportsGet = true)]
-        public int KivalasztottFolyo { get; set; }
+        public string KivalasztottFolyo { get; set; }
 
         public IList<Adatok> Adatok { get;set; } = default!;
-        public IList<int> Folyok { get; set; } = default!;
+        public IList<string> Folyok { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
