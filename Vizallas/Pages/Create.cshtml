@@ -1,0 +1,49 @@
+﻿@page
+@model Vizallas.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Adatok</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Adatok.datum" class="control-label"></label>
+                <input asp-for="Adatok.datum" class="form-control" />
+                <span asp-validation-for="Adatok.datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adatok.vizallas" class="control-label"></label>
+                <input asp-for="Adatok.vizallas" class="form-control" />
+                <span asp-validation-for="Adatok.vizallas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adatok.varos" class="control-label"></label>
+                <input asp-for="Adatok.varos" class="form-control" />
+                <span asp-validation-for="Adatok.varos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adatok.folyo" class="control-label"></label>
+                <input asp-for="Adatok.folyo" class="form-control" />
+                <span asp-validation-for="Adatok.folyo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

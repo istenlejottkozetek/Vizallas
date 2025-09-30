@@ -1,0 +1,54 @@
+﻿@page
+@model Vizallas.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Adatok[0].datum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adatok[0].vizallas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adatok[0].varos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adatok[0].folyo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Adatok) {
+        <tr> 
+            <td>
+                @Html.DisplayFor(modelItem => item.datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vizallas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.varos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.folyo)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
