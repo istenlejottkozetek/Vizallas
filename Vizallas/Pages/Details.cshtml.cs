@@ -28,7 +28,7 @@ namespace Vizallas.Pages
                 return NotFound();
             }
 
-            var adatok = await _context.Adatok.FirstOrDefaultAsync(m => m.Id == id);
+            var adatok = await _context.Adat.FirstOrDefaultAsync(m => m.Id == id);
             if (adatok == null)
             {
                 return NotFound();

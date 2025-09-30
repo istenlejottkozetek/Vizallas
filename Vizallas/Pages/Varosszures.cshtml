@@ -10,6 +10,18 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<p>
+    <form method="get">
+        <select asp-for="@Model.KivalasztottVaros">
+            @foreach (var Varos in Model.Varos)
+            {
+                <option value="@Varos">@Varos</option>
+            }
+            <input type="submit" value="OK" />
+
+        </select>
+    </form>
+</p>
 <table class="table">
     <thead>
         <tr>

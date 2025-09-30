@@ -35,7 +35,7 @@ namespace Vizallas.Pages
                 return Page();
             }
 
-            _context.Adatok.Add(Adatok);
+            _context.Adat.Add(Adatok);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

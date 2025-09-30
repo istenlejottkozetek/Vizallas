@@ -8,7 +8,7 @@ namespace Vizallas.Data
         public VizallasDbContext(DbContextOptions<VizallasDbContext> options) : base(options)
         {
         }
-        public DbSet<Vizallas.Models.Adatok> Adatok { get; set; } = default!;
+        public DbSet<Adatok> Adat { get; set; } = default!;
     }
 
 }

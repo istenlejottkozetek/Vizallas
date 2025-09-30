@@ -29,7 +29,7 @@ namespace Vizallas.Pages
                 return NotFound();
             }
 
-            var adatok = await _context.Adatok.FirstOrDefaultAsync(m => m.Id == id);
+            var adatok = await _context.Adat.FirstOrDefaultAsync(m => m.Id == id);
 
             if (adatok == null)
             {
@@ -49,11 +49,11 @@ namespace Vizallas.Pages
                 return NotFound();
             }
 
-            var adatok = await _context.Adatok.FindAsync(id);
+            var adatok = await _context.Adat.FindAsync(id);
             if (adatok != null)
             {
                 Adatok = adatok;
-                _context.Adatok.Remove(Adatok);
+                _context.Adat.Remove(Adatok);
                 await _context.SaveChangesAsync();
             }
 

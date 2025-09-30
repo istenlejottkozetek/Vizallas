@@ -23,7 +23,7 @@ namespace Vizallas.Pages
 
         public async Task OnGetAsync()
         {
-            Adatok = await _context.Adatok.ToListAsync();
+            Adatok = await _context.Adat.ToListAsync();
         }
     }
 }

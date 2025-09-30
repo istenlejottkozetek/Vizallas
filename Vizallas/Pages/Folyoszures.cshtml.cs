@@ -26,7 +26,7 @@ namespace Vizallas.Pages
 
         public async Task OnGetAsync()
         {
-           Folyok = await _context.Adatok
+           Folyok = await _context.Adat
                 .Select(a => a.folyo)
                 .Distinct()
                 .OrderBy(f => f)
@@ -38,7 +38,7 @@ namespace Vizallas.Pages
                 KivalasztottFolyo = Folyok.FirstOrDefault();
             }
 #pragma warning restore CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
-            Adatok = await _context.Adatok
+            Adatok = await _context.Adat
                 .Where(a => a.folyo == KivalasztottFolyo)
                 .ToListAsync();
         }

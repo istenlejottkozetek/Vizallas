@@ -10,6 +10,18 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<p>
+    <form method="get">
+        <select asp-for="@Model.KivalasztottFolyo">
+            @foreach (var folyo in Model.Folyok)
+            {
+                <option value="@folyo">@folyo</option>
+            }
+<input type="submit" value="OK" />
+   
+</select>
+    </form>
+</p>
 <table class="table">
     <thead>
         <tr>

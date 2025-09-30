@@ -25,7 +25,7 @@ namespace Vizallas.Pages
 
         public async Task OnGetAsync()
         {
-            Varos = await _context.Adatok
+            Varos = await _context.Adat
                 .Select(a => a.varos)
                 .Distinct()
                 .OrderBy(f => f)
@@ -37,7 +37,7 @@ namespace Vizallas.Pages
                 KivalasztottVaros = Varos.FirstOrDefault();
             }
 
-            Adatok = await _context.Adatok
+            Adatok = await _context.Adat
                 .Where(a => a.varos == KivalasztottVaros)
                 .ToListAsync();
         }
